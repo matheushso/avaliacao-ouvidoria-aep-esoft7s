@@ -12,14 +12,14 @@ import com.avaliacao.ouvidoria.domain.Admin;
 import com.avaliacao.ouvidoria.domain.service.AdminService;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/login")
 public class AdminController {
 
 	@Autowired
 	private AdminService service;
 	
 	@GetMapping
-	public List<Admin> getAdmin(@RequestParam(name = "cpf", required = false) String termo) {
-		return service.encontrarTodos(termo);
+	public List<Admin> getLogin(@RequestParam String cpf, @RequestParam String senha) {
+		return service.login(cpf, senha);
 	}
 }

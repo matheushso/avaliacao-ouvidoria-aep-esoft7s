@@ -20,26 +20,21 @@ public class AvaliacaoOuvidoriaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-//		Admin admin = adminRepository.findById(1).get();
-//		
-//		insertRelatorio();
-		
+//		insterAdmin();
 	}
 	
 	private void insertRelatorio() {
-//		Relatorio relatorio = Relatorio.builder()
-//				.data(format)
+		//TODO Realizar teste inserindo dados do relatório...
 	
 	}
 
 	public void insterAdmin() {
-		Admin admin1 = Admin.builder()
-				.id(1L)			//ID NÃO É NECESSÁRIO PASSAR, POIS ELE É AUTO INCREMENT
-				.cpf("111111")
-				.senha("senha")
-				.build();
-		
-		adminRepository.save(admin1);
+//		Admin admin1 = Admin.builder()
+//				.cpf("4444")
+//				.senha("senha4")
+//				.build();
+//		
+//		adminRepository.save(admin1);
 	}
 	
 }

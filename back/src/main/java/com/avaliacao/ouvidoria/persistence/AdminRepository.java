@@ -8,9 +8,9 @@ import com.avaliacao.ouvidoria.domain.Admin;
 
 public interface AdminRepository extends JpaRepository<Admin, Long>{
 	
-	List<Admin> findByCpfLike(String termo);
+	List<Admin> findByCpfAndSenhaLike(String cpf, String senha);
 	
-//	@Query(value = "select a from Admin a where a.cpf = :termo")
-//	List<Admin> encontrarPeloCpf(String termo);
+//	@Query(value = "select a from Admin a where a.cpf = :cpf and a.senha = :senha")
+//	List<Admin> encontrarAdmin(String cpf, senha);
 	
 }

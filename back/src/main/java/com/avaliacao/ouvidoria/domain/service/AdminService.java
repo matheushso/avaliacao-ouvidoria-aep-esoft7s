@@ -17,11 +17,14 @@ public class AdminService {
 	@Autowired
 	private AdminRepository repository;
 	
-	public List<Admin> encontrarTodos(String termo) {
-		if (termo == null || termo.trim().length() == 0) {
-			return repository.findAll();
+	public List<Admin> login(String cpf, String senha) {
+//		return repository.findByCpfAndSenhaLike(cpf, senha);
+		if(repository.findByCpfAndSenhaLike(cpf, senha).isEmpty()) {
+			System.out.println("CPF ou Senha inválidos!");
+			return null;
 		} else {
-			return repository.findByCpfLike(termo);
+			return repository.findByCpfAndSenhaLike(cpf, senha);
 		}
+		//TODO Tratar exception quando o cpf e/ou senha não são informados
 	}
 }
