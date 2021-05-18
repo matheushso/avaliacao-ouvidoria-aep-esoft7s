@@ -1,0 +1,48 @@
+body{
+    background-image: url(img/Maringa.png);  
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+/*.home{
+    font-family: 'Bebas Neue', cursive;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}*/
+
+h1{
+    display: block;
+}
+
+#logo-pmm{
+    height: 200px;
+    height: 200px;
+    display: block;
+    margin-top: 250px;
+}
+
+.description{
+    font-size: 35px;
+    color: white;
+    display: block;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 45px;
+}
+
+.mb-3{
+    width: 300px;
+    display: block;
+    margin-top: 20px;
+    
+}
+
+.botaoiniciar{
+    display: block;
+    margin-top: 10px;
+}
+
