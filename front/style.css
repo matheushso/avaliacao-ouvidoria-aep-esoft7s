@@ -1,18 +1,14 @@
 body{
-    background-image: url(img/Maringa.png);  
-    font-family: 'Bebas Neue', cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
-}
-
-/*.home{
-    font-family: 'Bebas Neue', cursive;
-    display: inline-block;
     align-items: center;
-    justify-content: center;
-}*/
+    background: url(img/Maringa.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
 
 h1{
     display: block;
@@ -26,7 +22,6 @@ h1{
 }
 
 .description{
-    font-size: 35px;
     color: white;
     display: block;
     font-family: 'Bebas Neue', cursive;
@@ -37,12 +32,44 @@ h1{
 .mb-3{
     width: 300px;
     display: block;
-    margin-top: 20px;
-    
+    margin-top: 20px;   
 }
 
 .botaoiniciar{
     display: block;
     margin-top: 10px;
+}
+
+.section{
+    /*border: solid 2px;*/
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#f8f8ff;
+    border-radius: 10px;
+    margin: 200px;
+}
+.section{
+    background-color: rgba(248,248,255,0.5);
+}
+
+#logo-login{
+    margin-top: 10px;
+    height: 200px;
+    height: 200px;
+    display: block;
+    opacity: 1.0;
+    
+}
+
+.description-login{
+    display: block;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    margin: 10px;
 }
 
