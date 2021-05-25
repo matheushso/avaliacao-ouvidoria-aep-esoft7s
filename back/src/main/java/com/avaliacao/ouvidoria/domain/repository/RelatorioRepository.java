@@ -1,4 +1,4 @@
-package com.avaliacao.ouvidoria.persistence;
+package com.avaliacao.ouvidoria.domain.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
