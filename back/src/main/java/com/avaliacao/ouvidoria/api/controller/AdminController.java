@@ -1,6 +1,7 @@
-package com.avaliacao.ouvidoria.domain.controller;
+package com.avaliacao.ouvidoria.api.controller;
 
-import java.util.List;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.avaliacao.ouvidoria.domain.Admin;
+import com.avaliacao.ouvidoria.domain.model.Admin;
 import com.avaliacao.ouvidoria.domain.service.AdminService;
 
 @RestController
@@ -19,7 +20,7 @@ public class AdminController {
 	private AdminService service;
 	
 	@GetMapping
-	public List<Admin> getLogin(@RequestParam String cpf, @RequestParam String senha) {
+	public Admin getLogin(@RequestParam @Valid String cpf, @RequestParam String senha) {
 		return service.login(cpf, senha);
 	}
 }
