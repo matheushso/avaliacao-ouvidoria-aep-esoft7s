@@ -1,7 +1,5 @@
 package com.avaliacao.ouvidoria.domain.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,20 +30,20 @@ public class Relatorio {
 	private Long id;
 	
 	@Column
-	private Date data_Inicial;
+	private String data_inicial;
 	
 	@Column 
-	private Date data_Final;
+	private String data_final;
 	
 	@Column
-	private Integer mediaGeral;
+	private Integer media_geral;
 
 	@ManyToOne
 	@JoinColumn(name = "admin_id")
 	private Admin admin_id;
 	
-//	@ManyToOne
-//	@JoinColumn(name = "avaliacao_id")
-//	private Avaliacao avaliacao_id;
-//	
+	@ManyToOne
+	@JoinColumn(name = "avaliacao_id")
+	private Avaliacao avaliacao_id;
+	
 }
