@@ -1,9 +1,11 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Login from './login'
 
 function App() {
   return (
     <div className="App">
-      ALÔ
+      <Login></Login>
     </div>
   );
 }
