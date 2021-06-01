@@ -28,9 +28,9 @@ public class AdminController {
 			if (login != null) {
 				return ResponseEntity.status(HttpStatus.OK).body("Logado com sucesso");
 			}
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Login ou senha inválido");
+			return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Login ou senha inválido");
 		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Login ou senha inválido");
+			return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Login ou senha inválido");
 		}
 	}
 }
