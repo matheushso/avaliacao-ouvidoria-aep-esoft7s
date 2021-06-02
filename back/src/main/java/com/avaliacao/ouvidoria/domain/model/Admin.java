@@ -28,7 +28,8 @@ public class Admin {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	@NotBlank
+	//TODO Alterar String de 'cpf' para 'usuario'
+	@NotBlank
 	@Column
 	private String cpf;
 	
