@@ -73,3 +73,140 @@ h1{
     margin: 10px;
 }
 
+.section-form{
+    /*border: solid 2px;*/
+    width: 800px;
+    height: 1100px;
+    margin: 25px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.head{
+    display: flex;
+    flex-direction: row;
+}
+#logo-form{
+    height: 150px;
+    height: 150px;
+    margin: 10px;
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.description-form{
+    display: flex;
+    flex-direction: row;
+    /*font-family: 'Bebas Neue', cursive;*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-left: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/******************* */
+.questao{
+    border: 2px solid;
+    border-color:#d3d3d3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.questao:hover{
+    border-color: black;
+}
+
+.bt{
+    background-color: white;
+    border: 3px solid ;
+    width: 40px;
+    height: 40px;
+    border-color:#d3d3d3;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+#bt1:hover{
+    background-color: red;
+    border-color: red;
+}
+
+#bt2:hover{
+    background-color: orange;
+    border-color: orange;
+}
+
+#bt3:hover{
+    background-color: #32ed32;
+    border-color:#32ed32;
+}
+
+.botaofinalizar{
+    margin-top: 20px;
+}
+
+#logo-admin{
+    height: 120px;
+    height: 120px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.description-admin{
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+.bts-relatorios{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.bt-geral{
+    border: 3px solid;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.gerar{
+    background-color: green;
+    color: white;
+    border-color: green;
+    border-radius: 10px;
+}
+
+.bt-geral:hover{
+    border-color: green;
+}
+#icon{
+    max-width: 150px;
+}
