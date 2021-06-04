@@ -1,17 +1,16 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Login from './login'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Home from './home';
-import Relatorio from './relatorio';
-import Formulario from './formulario';
-import RelatorioGeral from './relatorioGeral';
-import RelatorioIndividual from './relatorioIndividual';
+import Home from './components/home';
+import Login from './components/login'
+import Relatorio from './components/relatorio';
+import Formulario from './components/formulario';
+import RelatorioGeral from './components/relatorioGeral';
+import RelatorioIndividual from './components/relatorioIndividual';
 
 function App() {
   return (
     <div className="App">
-      
       <Router>
         <Switch>
           <Route exact path="/">

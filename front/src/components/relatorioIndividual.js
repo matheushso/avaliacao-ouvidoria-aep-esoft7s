@@ -1,5 +1,5 @@
-import Logo from './img/Logo.png'
-import './style.css'
+import Logo from '../img/Logo.png'
+import '../style.css'
 
 const RelatorioIndividual = () => {
 

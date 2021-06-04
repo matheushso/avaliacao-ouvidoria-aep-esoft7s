@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import Login from './img/logo-login.png'
-import Logo from './img/Logo.png'
-import './style.css'
+import Login from '../img/logo-login.png'
+import Logo from '../img/Logo.png'
+import '../style.css'
 
 const Home = () => {
 

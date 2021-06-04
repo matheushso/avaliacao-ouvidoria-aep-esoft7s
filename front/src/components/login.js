@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import Logo from './img/Logo.png'
-import './style.css'
+import Logo from '../img/Logo.png'
+import '../style.css'
 import axios from 'axios';
 
 const Login = () => {
