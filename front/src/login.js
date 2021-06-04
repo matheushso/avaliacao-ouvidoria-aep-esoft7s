@@ -21,7 +21,7 @@ const Login = () => {
         });
         setMensagem(result.data);
         console.warn(mensagem);
-        history.push('/teste');
+        history.push('/relatorio');
     }
 
     return (
@@ -30,9 +30,9 @@ const Login = () => {
             <h1 className="description-login" >BEM-VINDO A INTRANET</h1>
             <input className="mb-3 form-control" type="text" id="input-usuario" placeholder="Usuário"
             onChange={(u)=>setUsuario((u.target.value))}></input>
-            <input className="mb-3 form-control" type="text" id="input-senha" placeholder="Senha" 
+            <input className="mb-3 form-control" type="password" id="input-senha" placeholder="Senha" 
             onChange={(s)=>setSenha((s.target.value))}></input>
-            <p class="text-danger mb-3">{mensagem}</p>
+            {mensagem}
             <button onClick={login} className="botaoiniciar btn btn-success" type="button">Fazer login</button>    
         </div>
     )
