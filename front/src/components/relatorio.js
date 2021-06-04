@@ -1,7 +1,7 @@
-import Logo from './img/Logo.png'
 import { useHistory } from 'react-router-dom'
-import LogoRelatorio from './img/icon.png'
-import './style.css'
+import Logo from '../img/Logo.png'
+import LogoRelatorio from '../img/icon.png'
+import '../style.css'
 
 const Relatorio = () => {
 
