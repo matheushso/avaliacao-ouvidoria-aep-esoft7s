@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router'
 import Logo from '../img/Logo.png'
 import '../style.css'
+import axios from 'axios';
 
 const Formulario = () => {
 
-    return (
-        <div class="section-form">
+    const location = useLocation();
+    var resposta = null;
+    
+    var protocolo = location.state.protocolo
 
-            <div class="head">
+    console.log(protocolo)
+
+    async function login(props) {
+        const result = await axios.post("/avaliacao", {
+                protocolo: protocolo,
+                resposta: 2,
+                setor: "teste"
+        });
+        console.log(result)
+    }
+
+
+    return (
+        <div className="section-form">
+
+            <div className="head">
                 <img id="logo-form" src={Logo} alt="ouvidoria156"></img>
                 
                 <div className="description-form">
@@ -15,102 +34,105 @@ const Formulario = () => {
                 </div>
             </div>
 
-            <div class="formulario">
+            <div>
+                Protocolo: {protocolo}
+            </div>
 
-                <div class="questao" id="questao01">
+            <div className="formulario">
+
+                <div className="questao" id="questao01">
                     O quanto avalia a rapidez do atendimento?
 
-                    <div class="bts">
-                        <button class="bt" id="bt1" type="submit">1</button>
-                        <button class="bt" type="submit" id="bt1">2</button>
-                        <button class="bt" type="submit" id="bt1">3</button>
-                        <button class="bt" type="submit" id="bt1">4</button>
-                        <button class="bt" type="submit" id="bt2">5</button>
-                        <button class="bt" type="submit" id="bt2">6</button>
-                        <button class="bt" type="submit" id="bt2">7</button>
-                        <button class="bt" type="submit" id="bt3">8</button>
-                        <button class="bt" type="submit" id="bt3">9</button>
-                        <button class="bt" type="submit" id="bt3">10</button>
-                
+                    <div className="bts">
+                        <button onClick={login} className="bt" id="bt1" type="submit">1</button>
+                        <button className="bt" type="submit" id="bt1">2</button>
+                        <button className="bt" type="submit" id="bt1">3</button>
+                        <button className="bt" type="submit" id="bt1">4</button>
+                        <button className="bt" type="submit" id="bt2">5</button>
+                        <button className="bt" type="submit" id="bt2">6</button>
+                        <button className="bt" type="submit" id="bt2">7</button>
+                        <button className="bt" type="submit" id="bt3">8</button>
+                        <button className="bt" type="submit" id="bt3">9</button>
+                        <button className="bt" type="submit" id="bt3">10</button>
                     </div>
 
                 </div>
 
-                <div class="questao" id="questao02">
+                <div className="questao" id="questao02">
                     O quanto avalia a qualidade do atendimento?
 
-                    <div class="bts">
-                        <button class="bt" id="bt1" type="submit">1</button>
-                        <button class="bt" type="submit" id="bt1">2</button>
-                        <button class="bt" type="submit" id="bt1">3</button>
-                        <button class="bt" type="submit" id="bt1">4</button>
-                        <button class="bt" type="submit" id="bt2">5</button>
-                        <button class="bt" type="submit" id="bt2">6</button>
-                        <button class="bt" type="submit" id="bt2">7</button>
-                        <button class="bt" type="submit" id="bt3">8</button>
-                        <button class="bt" type="submit" id="bt3">9</button>
-                        <button class="bt" type="submit" id="bt3">10</button>
+                    <div className="bts">
+                        <button className="bt" id="bt1" type="submit">1</button>
+                        <button className="bt" type="submit" id="bt1">2</button>
+                        <button className="bt" type="submit" id="bt1">3</button>
+                        <button className="bt" type="submit" id="bt1">4</button>
+                        <button className="bt" type="submit" id="bt2">5</button>
+                        <button className="bt" type="submit" id="bt2">6</button>
+                        <button className="bt" type="submit" id="bt2">7</button>
+                        <button className="bt" type="submit" id="bt3">8</button>
+                        <button className="bt" type="submit" id="bt3">9</button>
+                        <button className="bt" type="submit" id="bt3">10</button>
                 
                     </div>
                 </div>
 
-                <div class="questao" id="questao03">
+                <div className="questao" id="questao03">
                     O quanto avalia a disposição do atendente?
 
-                    <div class="bts">
-                        <button class="bt" id="bt1" type="submit">1</button>
-                        <button class="bt" type="submit" id="bt1">2</button>
-                        <button class="bt" type="submit" id="bt1">3</button>
-                        <button class="bt" type="submit" id="bt1">4</button>
-                        <button class="bt" type="submit" id="bt2">5</button>
-                        <button class="bt" type="submit" id="bt2">6</button>
-                        <button class="bt" type="submit" id="bt2">7</button>
-                        <button class="bt" type="submit" id="bt3">8</button>
-                        <button class="bt" type="submit" id="bt3">9</button>
-                        <button class="bt" type="submit" id="bt3">10</button>
+                    <div className="bts">
+                        <button className="bt" id="bt1" type="submit">1</button>
+                        <button className="bt" type="submit" id="bt1">2</button>
+                        <button className="bt" type="submit" id="bt1">3</button>
+                        <button className="bt" type="submit" id="bt1">4</button>
+                        <button className="bt" type="submit" id="bt2">5</button>
+                        <button className="bt" type="submit" id="bt2">6</button>
+                        <button className="bt" type="submit" id="bt2">7</button>
+                        <button className="bt" type="submit" id="bt3">8</button>
+                        <button className="bt" type="submit" id="bt3">9</button>
+                        <button className="bt" type="submit" id="bt3">10</button>
                 
                     </div>
                 </div>
 
-                <div class="questao" id="questao04">
+                <div className="questao" id="questao04">
                     O quanto avalia a facilidade de contato?
 
-                    <div class="bts">
-                        <button class="bt" id="bt1" type="submit">1</button>
-                        <button class="bt" type="submit" id="bt1">2</button>
-                        <button class="bt" type="submit" id="bt1">3</button>
-                        <button class="bt" type="submit" id="bt1">4</button>
-                        <button class="bt" type="submit" id="bt2">5</button>
-                        <button class="bt" type="submit" id="bt2">6</button>
-                        <button class="bt" type="submit" id="bt2">7</button>
-                        <button class="bt" type="submit" id="bt3">8</button>
-                        <button class="bt" type="submit" id="bt3">9</button>
-                        <button class="bt" type="submit" id="bt3">10</button>
+                    <div className="bts">
+                        <button className="bt" id="bt1" type="submit">1</button>
+                        <button className="bt" type="submit" id="bt1">2</button>
+                        <button className="bt" type="submit" id="bt1">3</button>
+                        <button className="bt" type="submit" id="bt1">4</button>
+                        <button className="bt" type="submit" id="bt2">5</button>
+                        <button className="bt" type="submit" id="bt2">6</button>
+                        <button className="bt" type="submit" id="bt2">7</button>
+                        <button className="bt" type="submit" id="bt3">8</button>
+                        <button className="bt" type="submit" id="bt3">9</button>
+                        <button className="bt" type="submit" id="bt3">10</button>
                 
                     </div>
                 </div>
 
-                <div class="questao" id="questao05">
+                <div className="questao" id="questao05">
                     O quanto avalia o atendimento em modo geral?
 
-                    <div class="bts">
-                        <button class="bt" id="bt1" type="submit">1</button>
-                        <button class="bt" type="submit" id="bt1">2</button>
-                        <button class="bt" type="submit" id="bt1">3</button>
-                        <button class="bt" type="submit" id="bt1">4</button>
-                        <button class="bt" type="submit" id="bt2">5</button>
-                        <button class="bt" type="submit" id="bt2">6</button>
-                        <button class="bt" type="submit" id="bt2">7</button>
-                        <button class="bt" type="submit" id="bt3">8</button>
-                        <button class="bt" type="submit" id="bt3">9</button>
-                        <button class="bt" type="submit" id="bt3">10</button>
+                    <div className="bts">
+                        <button className="bt" id="bt1" type="submit">1</button>
+                        <button className="bt" type="submit" id="bt1">2</button>
+                        <button className="bt" type="submit" id="bt1">3</button>
+                        <button className="bt" type="submit" id="bt1">4</button>
+                        <button className="bt" type="submit" id="bt2">5</button>
+                        <button className="bt" type="submit" id="bt2">6</button>
+                        <button className="bt" type="submit" id="bt2">7</button>
+                        <button className="bt" type="submit" id="bt3">8</button>
+                        <button className="bt" type="submit" id="bt3">9</button>
+                        <button className="bt" type="submit" id="bt3">10</button>
                 
                     </div>
 
                 </div>
                 
-                <div class="botaofinalizar">
-                    <button type="button" class="btn btn-success">Finalizar avaliação</button>
+                <div className="botaofinalizar">
+                    <button type="button" className="btn btn-success">Finalizar avaliação</button>
                 </div>
             
                 
