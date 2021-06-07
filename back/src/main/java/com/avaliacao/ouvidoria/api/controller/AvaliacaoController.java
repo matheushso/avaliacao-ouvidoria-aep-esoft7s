@@ -20,7 +20,7 @@ public class AvaliacaoController {
 	
 	@PostMapping
 	public String post(@RequestBody @Valid Avaliacao novo){
-		Avaliacao salvar = service.salvar(novo);
+		service.salvar(novo);
 		return "Salvando Avaliacao";
 	}
 }

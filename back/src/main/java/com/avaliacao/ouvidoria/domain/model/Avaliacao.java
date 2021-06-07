@@ -36,8 +36,6 @@ public class Avaliacao {
 	@NotBlank
 	@Column
 	private int resposta;
-
-	@NotBlank
-	@Column
-	private String setor;
+	
+	//TODO Adicionar campo pergunta
 }
