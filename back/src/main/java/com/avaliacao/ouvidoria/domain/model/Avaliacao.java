@@ -35,7 +35,9 @@ public class Avaliacao {
 	
 	@NotBlank
 	@Column
-	private int resposta;
+	private int pergunta;
 	
-	//TODO Adicionar campo pergunta
+	@NotBlank
+	@Column
+	private int resposta;
 }

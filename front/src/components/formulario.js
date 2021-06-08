@@ -8,10 +8,12 @@ const Formulario = () => {
 
     const location = useLocation();
     var protocolo = location.state.protocolo
+    //var pergunta = null;
 
-    async function resposta(resposta) {
+    async function resposta(pergunta, resposta) {
         const result = await axios.post("/avaliacao", {
             protocolo: protocolo,
+            pergunta: pergunta,
             resposta: resposta
          });
         console.log(result)
@@ -39,16 +41,16 @@ const Formulario = () => {
                     O quanto avalia a rapidez do atendimento?
 
                     <div className="bts">
-                        <button id="bt1" onClick={() => resposta(1)} className="bt" type="submit">1</button>
-                        <button id="bt1" onClick={() => resposta(2)} className="bt" type="submit">2</button>
-                        <button id="bt1" onClick={() => resposta(3)} className="bt" type="submit">3</button>
-                        <button id="bt1" onClick={() => resposta(4)} className="bt" type="submit">4</button>
-                        <button id="bt2" onClick={() => resposta(5)} className="bt" type="submit">5</button>
-                        <button id="bt2" onClick={() => resposta(6)} className="bt" type="submit">6</button>
-                        <button id="bt2" onClick={() => resposta(7)} className="bt" type="submit">7</button>
-                        <button id="bt3" onClick={() => resposta(8)} className="bt" type="submit">8</button>
-                        <button id="bt3" onClick={() => resposta(9)} className="bt" type="submit">9</button>
-                        <button id="bt3" onClick={() => resposta(10)} className="bt" type="submit">10</button>
+                        <button id="bt1" onClick={() => resposta(1,1)} className="bt" type="submit">1</button>
+                        <button id="bt1" onClick={() => resposta(1,2)} className="bt" type="submit">2</button>
+                        <button id="bt1" onClick={() => resposta(1,3)} className="bt" type="submit">3</button>
+                        <button id="bt1" onClick={() => resposta(1,4)} className="bt" type="submit">4</button>
+                        <button id="bt2" onClick={() => resposta(1,5)} className="bt" type="submit">5</button>
+                        <button id="bt2" onClick={() => resposta(1,6)} className="bt" type="submit">6</button>
+                        <button id="bt2" onClick={() => resposta(1,7)} className="bt" type="submit">7</button>
+                        <button id="bt3" onClick={() => resposta(1,8)} className="bt" type="submit">8</button>
+                        <button id="bt3" onClick={() => resposta(1,9)} className="bt" type="submit">9</button>
+                        <button id="bt3" onClick={() => resposta(1,10)} className="bt" type="submit">10</button>
                     </div>
 
                 </div>
