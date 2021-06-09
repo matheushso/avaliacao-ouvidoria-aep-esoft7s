@@ -16,8 +16,12 @@ public class AvaliacaoService {
 	@Autowired
 	private AvaliacaoRepository repository;
 	
-	public Avaliacao salvar(Avaliacao avaliacao){
+	public Avaliacao salvar(Avaliacao avaliacao) {
 		return repository.save(avaliacao);
+	}
+	
+	public Avaliacao buscarPergunta(int protocolo, int pergunta) {
+		return repository.findByProtocoloAndPerguntaLike(protocolo, pergunta) ;
 	}
 	
 	

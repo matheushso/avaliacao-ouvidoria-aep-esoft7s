@@ -1,9 +1,7 @@
 package com.avaliacao.ouvidoria.api.controller;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +16,16 @@ public class AvaliacaoController {
 	@Autowired
 	private AvaliacaoService service;
 	
-	@PostMapping
-	public String post(@RequestBody @Valid Avaliacao novo){
-		service.salvar(novo);
-		return "Salvando Avaliacao";
+	@PutMapping
+	public String putAvaliacao(@RequestBody Avaliacao avaliacao){
+		Avaliacao atualizarRespostaDaPergunta = service.buscarPergunta(avaliacao.getProtocolo(), avaliacao.getPergunta());
+		if (atualizarRespostaDaPergunta != null) {
+			atualizarRespostaDaPergunta.setResposta(avaliacao.getResposta());
+			service.salvar(atualizarRespostaDaPergunta);
+			return "Resposta da pergunta foi atualizada!";
+		} else {
+			service.salvar(avaliacao);
+			return "Resposta registrada!";
+		}
 	}
 }
