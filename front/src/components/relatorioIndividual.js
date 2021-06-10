@@ -4,15 +4,15 @@ import '../style.css'
 const RelatorioIndividual = () => {
 
     return (
-        <div class="section">
-            <div class="logo">
+        <div className="section">
+            <div className="logo">
                 <img id="logo-admin" src={Logo}  alt="ouvidoria156"></img>
 
-                <div class="description-admin">
+                <div className="description-admin">
                     Geração de relatórios
                 </div>
             </div>
-            <div class="section-data">
+            <div className="section-data">
                 Selecione o intervalo de data:<br></br><br></br>
                 
                 <p>Inicio: <input type='date' id='d1' name='d1' min=""/></p>
@@ -20,20 +20,20 @@ const RelatorioIndividual = () => {
 
                 Selecione o setor de atendimento: <br/><br/>
 
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <div className="dropdown">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Setor de atendimento
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Denúncia/Reclamação</a></li>
-                    <li><a class="dropdown-item" href="#">Notificação</a></li>
-                    <li><a class="dropdown-item" href="#">Solicitação de serviços/descontos</a></li>
-                    <li><a class="dropdown-item" href="#">Bem Estar Animal e Castração </a></li>
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a className="dropdown-item" href="#">Denúncia/Reclamação</a></li>
+                    <li><a className="dropdown-item" href="#">Notificação</a></li>
+                    <li><a className="dropdown-item" href="#">Solicitação de serviços/descontos</a></li>
+                    <li><a className="dropdown-item" href="#">Bem Estar Animal e Castração </a></li>
                     </ul>
                 </div>
                 <br/>
-                <div class="botao-gerar">
-                    <button type="button" class="btn btn-success">Gerar relatório</button>
+                <div className="botao-gerar">
+                    <button type="button" className="btn btn-success">Gerar relatório</button>
                 </div>
         
             </div>
