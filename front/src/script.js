@@ -1,3 +1,5 @@
+ import $ from 'jquery' // react code here $("button").click(function(){ $.get("demo_test.asp", function(data, status){ alert("Data: " + data + "\nStatus: " + status); }); }); // react code here 
+
 $(document).ready(function() {
     $("#d1").change(function () {
       var split = $("#d1").val().split('-');
@@ -9,5 +11,6 @@ $(document).ready(function() {
               .join('-')
       });
     });
-});
-      
+}); 
+
+ 
