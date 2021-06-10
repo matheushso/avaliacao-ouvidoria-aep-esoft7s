@@ -7,6 +7,7 @@ import Relatorio from './components/relatorio';
 import Formulario from './components/formulario';
 import RelatorioGeral from './components/relatorioGeral';
 import RelatorioIndividual from './components/relatorioIndividual';
+import TesteRelatorio from './components/testeRelatorio';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/relatorioIndividual">
             <RelatorioIndividual></RelatorioIndividual>
+          </Route>
+          <Route exact path="/testeRelatorio">
+            <TesteRelatorio></TesteRelatorio>
           </Route>
         </Switch>
       </Router>

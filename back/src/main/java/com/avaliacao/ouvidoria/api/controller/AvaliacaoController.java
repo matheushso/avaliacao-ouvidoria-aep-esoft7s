@@ -1,6 +1,9 @@
 package com.avaliacao.ouvidoria.api.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +30,11 @@ public class AvaliacaoController {
 			service.salvar(avaliacao);
 			return "Resposta registrada!";
 		}
+	}
+	
+	//TODO Testando get APAGAR
+	@GetMapping
+	public List<Avaliacao> getAvaliacao() {
+		return service.buscarTodos();
 	}
 }

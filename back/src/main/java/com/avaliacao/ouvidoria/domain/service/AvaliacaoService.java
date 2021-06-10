@@ -1,5 +1,7 @@
 package com.avaliacao.ouvidoria.domain.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,12 @@ public class AvaliacaoService {
 	}
 	
 	public Avaliacao buscarPergunta(int protocolo, int pergunta) {
-		return repository.findByProtocoloAndPerguntaLike(protocolo, pergunta) ;
+		return repository.findByProtocoloAndPerguntaLike(protocolo, pergunta);
+	}
+	
+	//TODO Testando get APAGAR
+	public List<Avaliacao> buscarTodos() {
+		return repository.findAll();
 	}
 	
 	
