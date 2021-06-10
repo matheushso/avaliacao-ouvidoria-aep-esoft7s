@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useLocation } from 'react-router'
 import Logo from '../img/Logo.png'
 import '../style.css'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import '../style.css'
@@ -6,22 +6,26 @@ import axios from 'axios';
 
 const Login = () => {
 
+    const formRef = useRef(null)
     const [usuario, setUsuario]= useState("");
     const [senha, setSenha]= useState("");
     const [mensagem, setMensagem] = useState("");
     const history = useHistory();
 
     async function login() {
-        console.warn(usuario, senha)
-        const result = await axios.get("/login", {
-            params: {
-                cpf: usuario,
-                senha: senha
-            }
-        });
-        setMensagem(result.data);
-        console.warn(mensagem);
-        history.push('/relatorio');
+        try {
+            await axios.get("/login", {
+                params: {
+                    cpf: usuario,
+                    senha: senha
+                }
+            });
+            history.push('/relatorio');
+        } 
+        catch {
+            alert("Usuário ou senha inválido!")
+        }
+        
     }
 
     return (

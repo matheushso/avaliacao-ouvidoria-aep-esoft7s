@@ -16,19 +16,19 @@ const Relatorio = () => {
     }
 
     return (
-        <div class="section">
-            <div class="logo">
+        <div className="section">
+            <div className="logo">
                 <img id="logo-admin" src={Logo}  alt="ouvidoria156"></img>
-                <div class="description-admin">
+                <div className="description-admin">
                     Geração de relatórios
                 </div>
             </div>
-            <div class="bts-relatorios">
-                <div class="bt-geral">
+            <div className="bts-relatorios">
+                <div className="bt-geral">
                     <a href=""><img onClick={relatorioGeral} id="icon" src={LogoRelatorio} alt="relatorioGeral"></img></a>
                     Relatorio Geral
                 </div>
-                <div class="bt-geral">
+                <div className="bt-geral">
                     <a href=""><img onClick={relatorioIndividual} id="icon" src={LogoRelatorio} alt="relatorioIndividual"></img></a>
                     Relatorio <br></br> Individual
                 </div>
