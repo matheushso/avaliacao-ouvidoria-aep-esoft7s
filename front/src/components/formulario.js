@@ -3,9 +3,11 @@ import { useLocation } from 'react-router'
 import Logo from '../img/Logo.png'
 import '../style.css'
 import axios from 'axios';
+import { useHistory } from 'react-router-dom'
 
 const Formulario = () => {
 
+    const history = useHistory();
     const location = useLocation();
     var protocolo = location.state.protocolo
 
@@ -18,6 +20,9 @@ const Formulario = () => {
         console.log(result)
     }
 
+    function finalizar() {
+        history.push('/finalizar');
+    }
 
     return (
         <div className="section-form">
@@ -128,7 +133,7 @@ const Formulario = () => {
                 </div>
                 
                 <div className="botaofinalizar">
-                    <button type="button" className="btn btn-success">Finalizar avaliação</button>
+                    <button type="button" className="btn btn-success" onClick={finalizar}>Finalizar avaliação</button>
                 </div>
             
                 
