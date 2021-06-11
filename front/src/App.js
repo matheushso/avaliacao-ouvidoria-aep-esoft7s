@@ -8,6 +8,8 @@ import Formulario from './components/formulario';
 import RelatorioGeral from './components/relatorioGeral';
 import RelatorioIndividual from './components/relatorioIndividual';
 import TesteRelatorio from './components/testeRelatorio';
+import PrivateRoute from './privateRoute'
+
 
 function App() {
   return (
@@ -20,15 +22,15 @@ function App() {
           <Route exact path="/login">
             <Login></Login>
           </Route>
-          <Route exact path="/relatorio">
+          <PrivateRoute exact path="/relatorio">
             <Relatorio></Relatorio>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/formulario">
             <Formulario></Formulario>
           </Route>
-          <Route exact path="/relatorioGeral">
+          <PrivateRoute exact path="/relatorioGeral">
             <RelatorioGeral></RelatorioGeral>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/relatorioIndividual">
             <RelatorioIndividual></RelatorioIndividual>
           </Route>
