@@ -94,6 +94,22 @@ h1{
     flex-direction: column;
 
 }
+
+.section-form-finalizar{
+    /*border: solid 2px;*/
+    width: 800px;
+    height: 500px;
+    margin: 250px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#fim{
+    margin: 100px;
+    font-size: 30px;
+}
 .head{
     display: flex;
     flex-direction: row;
@@ -233,8 +249,6 @@ h1{
     border-radius: 10px;
     /*font-weight: bold;*/
     background-color: rgba(248,248,255,0.6);
-    
-    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

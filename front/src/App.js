@@ -7,6 +7,7 @@ import Relatorio from './components/relatorio';
 import Formulario from './components/formulario';
 import RelatorioGeral from './components/relatorioGeral';
 import RelatorioIndividual from './components/relatorioIndividual';
+import Finalizar from './components/finalizar';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           <Route exact path="/relatorioIndividual">
             <RelatorioIndividual></RelatorioIndividual>
           </Route>
+          <Route exact path="/finalizar">
+            <Finalizar></Finalizar>
+          </Route> 
         </Switch>
       </Router>
     </div>
