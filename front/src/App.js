@@ -31,7 +31,11 @@ function App() {
           <PrivateRoute exact path="/relatorioGeral">
             <RelatorioGeral></RelatorioGeral>
           </PrivateRoute>
+<<<<<<< HEAD
           <PrivateRoute exact path="/relatorioIndividual">
+=======
+          <Route exact path="/relatorioIndividual">
+>>>>>>> 8f637c01a73087aafcf09d52d30c6232a2ef2d27
             <RelatorioIndividual></RelatorioIndividual>
           </PrivateRoute>
           <Route exact path="/testeRelatorio">
