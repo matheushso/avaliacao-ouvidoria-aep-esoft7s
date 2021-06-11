@@ -1,23 +1,37 @@
-import React, { useState, Component } from 'react'
-import '../style.css'
+import React, { Component } from 'react';
 import axios from 'axios';
 
-const TesteRelatorio = () => {
+class testeRelatorio extends Component {
 
-    async function retornaGetAvaliacao() {
-        const result = await axios.get("/avaliacao", {
-                
-        });
-        console.log(result.data)
-    }
+  state = {
+    listar: [],
+  }
+
+  async componentDidMount() {
+    const response = await axios.get('/avaliacao');
+
+    this.setState({ listar: response.data });
+  }
+
+  render() {
+
+    const { listar } = this.state;
 
     return (
+      <div className="section">
+        <h1>Listar:</h1>
+        {listar.map(lista => (
+            <h2>
+              <h4>Protocolo: {lista.protocolo}</h4>
+              <br/>
+              <h4>Pergunta: {lista.pergunta}</h4>
+              <br/>
+              <h4>Resposta: {lista.resposta}</h4>
+            </h2>
+        ))}
+      </div>
+    );
+  };
+};
 
-        <div>
-            <button onClick={retornaGetAvaliacao}>TESTE</button>
-        </div>
-
-    )
-}
-
-export default TesteRelatorio;
+export default testeRelatorio;
