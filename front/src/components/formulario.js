@@ -31,7 +31,7 @@ const Formulario = () => {
             </div>
 
             <div>
-                <h3 class="text-center">Protocolo: {protocolo}</h3>
+                <h3 className="text-center">Protocolo: {protocolo}</h3>
             </div>
 
             <div className="formulario">

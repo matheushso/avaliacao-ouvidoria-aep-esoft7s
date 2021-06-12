@@ -6,6 +6,6 @@ import com.avaliacao.ouvidoria.domain.model.Avaliacao;
 
 public interface AvaliacaoRepository extends JpaRepository<Avaliacao, Long>{
 	
-	Avaliacao findByProtocoloAndPerguntaLike(int protocolo, int pergunta);
+	Avaliacao findByProtocoloAndPerguntaLike(String protocolo, int pergunta);
 	
 }

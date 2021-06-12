@@ -22,7 +22,7 @@ public class AvaliacaoService {
 		return repository.save(avaliacao);
 	}
 	
-	public Avaliacao buscarPergunta(int protocolo, int pergunta) {
+	public Avaliacao buscarPergunta(String protocolo, int pergunta) {
 		return repository.findByProtocoloAndPerguntaLike(protocolo, pergunta);
 	}
 	
