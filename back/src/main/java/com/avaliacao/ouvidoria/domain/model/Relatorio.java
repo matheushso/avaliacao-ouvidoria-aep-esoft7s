@@ -1,7 +1,5 @@
 package com.avaliacao.ouvidoria.domain.model;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,7 +30,7 @@ public class Relatorio {
 	
 	@NotBlank
 	@Column
-	private UUID idRelatorio;
+	private String idRelatorio;
 	
 	@NotBlank
 	@Column

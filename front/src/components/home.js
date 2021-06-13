@@ -15,7 +15,7 @@ const Home = () => {
 
     //Fazer validação caso protocolo vazio/espaço em branco
     function avaliacao() {
-        if (protocolo != "") {
+        if (protocolo !== "") {
             history.push({
                 pathname: '/formulario',
                 state: {protocolo: protocolo}

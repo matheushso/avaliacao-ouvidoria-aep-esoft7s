@@ -2,7 +2,37 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import '../style.css'
-import axios from 'axios';
+import axios from 'axios'
+import privateRoute from '../privateRoute'
+
+export const Autenticando = async (usuario, senha) => {
+    var autenticado = false;
+
+    try {
+        await axios.get("/login", {
+            params: {
+                cpf: usuario,
+                senha: senha
+            }
+        });
+        autenticado = true;
+        return(autenticado)
+    } 
+    catch {
+        alert("Usuário ou senha inválido!")
+        return(autenticado)
+    }
+}
+
+export const RetornaAutenticacao = async (autenticado) => {
+    if (autenticado === true) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
 
 const Login = () => {
 
@@ -11,19 +41,12 @@ const Login = () => {
     const history = useHistory();
 
     async function login() {
-        try {
-            await axios.get("/login", {
-                params: {
-                    cpf: usuario,
-                    senha: senha
-                }
-            });
-            history.push('/relatorio');
-        } 
-        catch {
-            alert("Usuário ou senha inválido!")
+        const autenticado = await Autenticando(usuario, senha)
+        RetornaAutenticacao(autenticado)
+        console.log(autenticado)
+        if (autenticado === true) {
+            history.push('/relatorio')
         }
-        
     }
 
     return (
@@ -34,8 +57,8 @@ const Login = () => {
             onChange={(u)=>setUsuario((u.target.value))}></input>
             <input className="mb-3 form-control" type="password" id="input-senha" placeholder="Senha" 
             onChange={(s)=>setSenha((s.target.value))}></input>
-            <button onClick={login} className="botaoiniciar btn btn-success" type="button">Fazer login</button>    
-        </div>
+            <button onClick={login} className="botaoiniciar btn btn-success" type="button">Fazer login</button>
+        </div> 
     )
 }
 
