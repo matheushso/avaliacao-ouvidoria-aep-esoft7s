@@ -24,11 +24,13 @@ export const Autenticando = async (usuario, senha) => {
     }
 }
 
-export const RetornaAutenticacao = async (autenticado) => {
+export const RetornaAutenticacao = (autenticado) => {
+    var valida = false;
     if (autenticado === true) {
-        return true;
+        valida = true;
+        return(valida);
     } else {
-        return false;
+        return(valida);
     }
 
 }
