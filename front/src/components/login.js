@@ -23,7 +23,7 @@ const Login = () => {
             history.push('/relatorio');
         } 
         catch {
-            alert("Usuário ou senha inválido!")
+            alert("Usuário ou senha inválidos!")
         }
         
     }

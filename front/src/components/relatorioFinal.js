@@ -31,31 +31,31 @@ const RelatorioFinal = () => {
                     <b>Setor de atendimento:</b>  
                 </div>
                 <div class="topico" id="t1">
-                    <b>Questão 01</b><br></br>
+                    <b>Questão 01 - (O quanto avalia a rapidez do atendimento?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t2">
-                    <b>Questão 02</b><br></br> 
+                    <b>Questão 02 - (O quanto avalia a qualidade do atendimento?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t3">
-                    <b>Questão 03</b><br></br> 
+                    <b>Questão 03 - (O quanto avalia a disposição do atendente?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t4">
-                    <b>Questão 04</b><br></br>
+                    <b>Questão 04 - (O quanto avalia a facilidade de contato?)</b><br></br>
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t5">
-                    <b>Questão 05</b><br></br> 
+                    <b>Questão 05 - (O quanto avalia o atendimento em modo geral?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
