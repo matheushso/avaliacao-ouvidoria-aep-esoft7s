@@ -1,15 +1,12 @@
 package com.avaliacao.ouvidoria.domain.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,27 +22,33 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
 public class Relatorio {
-	
+	//TODO Ajustar campos do Relatorio de acordo com a tabela
 	@Id
 	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank
 	@Column
-	private Date data_Inicial;
+	private String idRelatorio;
 	
-	@Column 
-	private Date data_Final;
-	
+	@NotBlank
 	@Column
-	private Integer mediaGeral;
-
-	@ManyToOne
-	@JoinColumn(name = "admin_id")
-	private Admin admin_id;
+	private int pergunta;
 	
-//	@ManyToOne
-//	@JoinColumn(name = "avaliacao_id")
-//	private Avaliacao avaliacao_id;
-//	
+	@NotBlank
+	@Column
+	private int totalPerguntas;
+	
+	@NotBlank
+	@Column
+	private Integer mediaTotal;
+	
+	@NotBlank
+	@Column
+	private int menorResposta;
+	
+	@NotBlank
+	@Column
+	private int maiorResposta;
 }

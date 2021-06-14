@@ -31,7 +31,7 @@ public class Avaliacao {
 	
 	@NotBlank
 	@Column
-	private int protocolo;
+	private String protocolo;
 	
 	@NotBlank
 	@Column
