@@ -1,8 +1,20 @@
 import Logo from '../img/Logo.png'
 import '../style.css'
+import { Button } from 'reactstrap';
+import { useHistory } from 'react-router-dom'
 
 const RelatorioGeral = () => {
 
+    const history = useHistory();
+
+    function relatorio() {
+        history.push('/relatorio');
+    }
+
+    function relatorioFinal() {
+        history.push('/relatorioFinal');
+    }
+    
     return (
         <div className="section">
             <div className="logo">
@@ -19,7 +31,8 @@ const RelatorioGeral = () => {
                 <p>Fim: <input type="date" id="calendario2" /></p>
 
                 <div className="botao-gerar">
-                    <button type="button" className="btn btn-success">Gerar relatório</button>
+                    <Button color="danger" onClick={relatorio}>Voltar</Button>{' '}
+                    <button type="button" className="btn btn-success"onClick={relatorioFinal}>Gerar relatório</button>
                 </div>
         
             </div>

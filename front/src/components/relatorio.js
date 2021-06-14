@@ -2,6 +2,8 @@ import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import LogoRelatorio from '../img/icon.png'
 import '../style.css'
+import { Button } from 'reactstrap';
+import Login from './login';
 
 const Relatorio = () => {
 
@@ -15,6 +17,11 @@ const Relatorio = () => {
         history.push('/relatorioIndividual');
     }
 
+    function sair() {
+        if (window.confirm("Realmente deseja sair?")) {
+            history.push('/login');
+          }
+    } 
     return (
         <div className="section">
             <div className="logo">
@@ -32,7 +39,9 @@ const Relatorio = () => {
                     <a href=""><img onClick={relatorioIndividual} id="icon" src={LogoRelatorio} alt="relatorioIndividual"></img></a>
                     Relatorio <br></br> Individual
                 </div>
+                
             </div>
+            <Button color="danger" onClick={sair}>Sair</Button>{' '}
         </div>
     )
 }

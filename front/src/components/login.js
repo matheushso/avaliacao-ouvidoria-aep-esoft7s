@@ -33,6 +33,10 @@ const Login = () => {
                 pathname: '/relatorio',
                 state: {autenticado: autenticado}
             });
+            history.push('/relatorio');
+        } 
+        catch {
+            alert("Usuário ou senha inválidos!")
         }
     }
 
