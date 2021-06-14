@@ -8,6 +8,8 @@ import Formulario from './components/formulario';
 import RelatorioGeral from './components/relatorioGeral';
 import RelatorioIndividual from './components/relatorioIndividual';
 import Finalizar from './components/finalizar';
+import RelatorioFinal from './components/relatorioFinal';
+
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
           </Route>
           <Route exact path="/finalizar">
             <Finalizar></Finalizar>
+          </Route> 
+          <Route exact path="/relatorioFinal">
+            <RelatorioFinal></RelatorioFinal>
           </Route> 
         </Switch>
       </Router>
