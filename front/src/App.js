@@ -8,8 +8,7 @@ import Formulario from './components/formulario';
 import RelatorioGeral from './components/relatorioGeral';
 import RelatorioIndividual from './components/relatorioIndividual';
 import TesteRelatorio from './components/testeRelatorio';
-import PrivateRoute from './privateRoute'
-
+import { PrivateRoute } from './components/login'
 
 function App() {
   return (

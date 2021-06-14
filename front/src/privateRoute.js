@@ -1,7 +1,7 @@
-import React from 'react'
+/* import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { Route, Redirect } from 'react-router'
-import { RetornaAutenticacao } from './components/login'
+import { Autenticando, RetornaAutenticacao } from './components/login' */
 
 //const PrivateRoute = ({...rest}) => {
     //<PrivateRoute {...rest} render={props => (
@@ -11,8 +11,29 @@ import { RetornaAutenticacao } from './components/login'
     //)}/>
   //}
 
-const privateRoute = props => RetornaAutenticacao()
-? <Route { ...props}/>
-: <Redirect to = "/login"/>
+/*   const PrivateRoute = ({ exact, strict, path, ...rest }) => (
+    <Route
+      exact={exact}
+      strict={strict}
+      path={path}
+      render={props =>
+        Autenticando() ? (
+          <Route {...props} {...rest} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: props.location }
+            }}
+          />
+        )
+      }
+    />
+  ); */
 
-export default privateRoute;
+
+/* const privateRoute = props => RetornaAutenticacao()
+? <Route { ...props}/>
+: <Redirect to = "/login"/> */
+
+//export default PrivateRoute;
