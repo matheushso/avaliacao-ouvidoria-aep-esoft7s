@@ -10,6 +10,10 @@ const RelatorioGeral = () => {
     function relatorio() {
         history.push('/relatorio');
     }
+
+    function relatorioFinal() {
+        history.push('/relatorioFinal');
+    }
     
     return (
         <div className="section">
@@ -28,7 +32,7 @@ const RelatorioGeral = () => {
 
                 <div className="botao-gerar">
                     <Button color="danger" onClick={relatorio}>Voltar</Button>{' '}
-                    <button type="button" className="btn btn-success">Gerar relatório</button>
+                    <button type="button" className="btn btn-success"onClick={relatorioFinal}>Gerar relatório</button>
                 </div>
         
             </div>
