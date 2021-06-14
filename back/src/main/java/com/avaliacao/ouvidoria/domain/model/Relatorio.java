@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
 public class Relatorio {
-	
+	//TODO Ajustar campos do Relatorio de acordo com a tabela
 	@Id
 	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,5 +38,17 @@ public class Relatorio {
 	
 	@NotBlank
 	@Column
-	private Integer mediaPergunta;
+	private int totalPerguntas;
+	
+	@NotBlank
+	@Column
+	private Integer mediaTotal;
+	
+	@NotBlank
+	@Column
+	private int menorResposta;
+	
+	@NotBlank
+	@Column
+	private int maiorResposta;
 }

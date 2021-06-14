@@ -27,45 +27,25 @@ public class RelatorioController {
 	
 	@PostMapping
 	public void postRelatorio() {
-		List<Avaliacao> todasAvaliacao = serviceAvaliacao.buscarTodos();
+		List<Avaliacao> gerarRelatorio = serviceAvaliacao.gerarRelatorio();
 		List<Integer> perguntas = new ArrayList();
+		int respostaAtual;
+		int somaTotalDasRespostas = 0;
 		
 		String idRelatorio = UUID.randomUUID().toString();
 		
-		System.out.println(todasAvaliacao.size());
-		System.out.println();
-		if(!serviceAvaliacao.buscarTodos().isEmpty()) {
-			for (int count = 0; count < todasAvaliacao.size() ; count++) {
-				
-				int perguntaAtual = todasAvaliacao.get(count).getPergunta();
-				
-				int respostaAtual = todasAvaliacao.get(count).getResposta();
-				
-				if(!perguntas.contains(todasAvaliacao.get(count).getPergunta())) {
-					perguntas.add(perguntaAtual);
-				}
-				
-				System.out.println(perguntas);
-				
-				//TODO Dentro do looping pegar todas as respostas das perguntas e calcular a media
-				//TODO Armazenar e comparar se a pergunta já existe na lista, se já armazenar a resposta junto com a que já está la
-				
-				//int somaTotalValorPerguntas =+ todasAvaliacao.get(count).getResposta();
-				
-			}
-		} else {
-			//TODO Somar mediaPergunta corretamente
-			System.out.println("Lista vazia!");
+		//TODO Alterar query para RelatorioRepository e adicionar todos os campos
+		System.out.println(gerarRelatorio.size());
+		if(!serviceAvaliacao.gerarRelatorio().isEmpty()) {
+			System.out.println();
+			System.out.println();
+			System.out.println(serviceAvaliacao.gerarRelatorio());
+//			Avaliacao relatorio = serviceAvaliacao.gerarRelatorio().get(0);
+			
+//			Relatorio relatorio = Relatorio.builder()
+//			.idRelatorio(idRelatorio)
+//			.pergunta(avaliacao.)
+//			.totalPerguntas(avaliacao.get)
 		}
-		
-//		Relatorio relatorio = Relatorio.builder()
-//				.idRelatorio(idRelatorio)
-//				.pergunta(pergunta)
-//				.mediaPergunta(10).build();
-//		
-//		count++;
-//		serviceRelatorio.salvar(relatorio);
-	
 	}
-	
 }

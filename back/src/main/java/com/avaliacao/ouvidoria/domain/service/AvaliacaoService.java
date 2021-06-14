@@ -27,8 +27,8 @@ public class AvaliacaoService {
 	}
 	
 	//TODO Testando get APAGAR
-	public List<Avaliacao> buscarTodos() {
-		return repository.findAll();
+	public List<Avaliacao> gerarRelatorio() {
+		return repository.gerarRelatorio();
 	}
 	
 	

@@ -31,10 +31,4 @@ public class AvaliacaoController {
 			return "Resposta registrada!";
 		}
 	}
-	
-	//TODO Testando get APAGAR
-	@GetMapping
-	public List<Avaliacao> getAvaliacao() {
-		return service.buscarTodos();
-	}
 }
