@@ -1,21 +1,8 @@
 import React, { useState } from 'react'
-import { useLocation } from 'react-router'
 import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import '../style.css'
 import axios from 'axios'
-import { Route, Redirect } from 'react-router'
-
-export const PrivateRoute = props => {
-    const location = useLocation();
-    var autenticado = location.state.autenticado;
-
-    return(
-        autenticado
-        ? <Route { ...props}/>
-        : <Redirect to = "/login"/>
-    )
-}
 
 export const Autenticando = async (usuario, senha) => {
     try {
@@ -47,7 +34,6 @@ const Login = () => {
                 state: {autenticado: autenticado}
             });
         }
-        
     }
 
     return (

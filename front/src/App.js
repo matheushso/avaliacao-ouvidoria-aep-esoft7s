@@ -8,7 +8,6 @@ import Formulario from './components/formulario';
 import RelatorioGeral from './components/relatorioGeral';
 import RelatorioIndividual from './components/relatorioIndividual';
 import TesteRelatorio from './components/testeRelatorio';
-import { PrivateRoute } from './components/login'
 
 function App() {
   return (
@@ -21,18 +20,18 @@ function App() {
           <Route exact path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute exact path="/relatorio">
+          <Route exact path="/relatorio">
             <Relatorio></Relatorio>
-          </PrivateRoute>
+          </Route>
           <Route exact path="/formulario">
             <Formulario></Formulario>
           </Route>
-          <PrivateRoute exact path="/relatorioGeral">
+          <Route exact path="/relatorioGeral">
             <RelatorioGeral></RelatorioGeral>
-          </PrivateRoute>
-          <PrivateRoute exact path="/relatorioIndividual">
+          </Route>
+          <Route exact path="/relatorioIndividual">
             <RelatorioIndividual></RelatorioIndividual>
-          </PrivateRoute>
+          </Route>
           <Route exact path="/testeRelatorio">
             <TesteRelatorio></TesteRelatorio>
           </Route>
