@@ -1,8 +1,6 @@
 import React from 'react'
-import { useLocation } from 'react-router'
 import Logo from '../img/Logo.png'
 import '../style.css'
-import axios from 'axios';
 
 const Finalizar = () => {
 

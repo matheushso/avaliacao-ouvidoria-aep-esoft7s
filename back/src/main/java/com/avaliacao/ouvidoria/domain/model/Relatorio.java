@@ -22,7 +22,6 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
 public class Relatorio {
-	//TODO Ajustar campos do Relatorio de acordo com a tabela
 	@Id
 	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
