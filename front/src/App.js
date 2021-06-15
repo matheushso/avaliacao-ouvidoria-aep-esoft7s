@@ -10,6 +10,7 @@ import RelatorioIndividual from './components/relatorioIndividual';
 import TesteRelatorio from './components/testeRelatorio';
 import Finalizar from './components/finalizar';
 import RelatorioFinal from './components/relatorioFinal';
+import AlterarQuestoes from './components/alterarQuestoes';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/relatorioFinal">
             <RelatorioFinal></RelatorioFinal>
           </Route>
+         
         </Switch>
       </Router>
     </div>

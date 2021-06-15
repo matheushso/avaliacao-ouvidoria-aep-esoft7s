@@ -5,7 +5,7 @@ import '../style.css'
 const Finalizar = () => {
 
     return (
-        <div className="section-form-finalizar">
+        <div className="section-form">
 
             <div className="head">
                 <img id="logo-form" src={Logo} alt="ouvidoria156"></img>
