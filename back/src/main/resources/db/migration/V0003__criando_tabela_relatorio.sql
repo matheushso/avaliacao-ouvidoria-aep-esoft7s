@@ -1,16 +1,11 @@
 create table relatorio(
     id bigint not null auto_increment,
-    data_inicial date not null,
-    data_final date not null,
-    media_geral int(2) not null,
-    admin_id bigint not null,
-    avaliacao_id bigint not null,
+    id_relatorio binary(36) not null,
+   	pergunta int(2) not null,
+   	total_perguntas int(2) not null,
+    media_total decimal(5,2) not null,
+    menor_resposta int(2) not null,
+    maior_resposta int(2) not null,
 
     primary key(id)
 );
-
-alter table relatorio add constraint fk_relatorio_admin
-foreign key (admin_id) references admin (id);
-
-alter table relatorio add constraint fk_relatorio_avaliacao
-foreign key (avaliacao_id) references avaliacao (id);

@@ -35,8 +35,12 @@ const Formulario = () => {
                 </div>
             </div>
 
+
             <div id="info-ptc">
                 Protocolo: {protocolo}
+            </div>
+            <div>
+                <h3 className="text-center">Protocolo: {protocolo}</h3>
             </div>
 
             <div className="formulario">
@@ -56,7 +60,6 @@ const Formulario = () => {
                         <button id="bt3" onClick={() => avaliacao(1,9)} className="bt" type="submit">9</button>
                         <button id="bt3" onClick={() => avaliacao(1,10)} className="bt" type="submit">10</button>
                     </div>
-
                 </div>
 
                 <div className="questao" id="questao02">
@@ -73,13 +76,11 @@ const Formulario = () => {
                         <button id="bt3" onClick={() => avaliacao(2,8)} className="bt" type="submit" >8</button>
                         <button id="bt3" onClick={() => avaliacao(2,9)} className="bt" type="submit" >9</button>
                         <button id="bt3" onClick={() => avaliacao(2,10)} className="bt" type="submit">10</button>
-                
                     </div>
                 </div>
 
                 <div className="questao" id="questao03">
                     O quanto avalia a disposição do atendente?
-
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(3,1)} className="bt" type="submit">1</button>
                         <button id="bt1" onClick={() => avaliacao(3,2)} className="bt" type="submit">2</button>
@@ -91,7 +92,6 @@ const Formulario = () => {
                         <button id="bt3" onClick={() => avaliacao(3,8)} className="bt" type="submit">8</button>
                         <button id="bt3" onClick={() => avaliacao(3,9)} className="bt" type="submit">9</button>
                         <button id="bt3" onClick={() => avaliacao(3,10)} className="bt" type="submit">10</button>
-                
                     </div>
                 </div>
 
@@ -109,13 +109,11 @@ const Formulario = () => {
                         <button id="bt3" onClick={() => avaliacao(4,8)} className="bt" type="submit">8</button>
                         <button id="bt3" onClick={() => avaliacao(4,9)} className="bt" type="submit">9</button>
                         <button id="bt3" onClick={() => avaliacao(4,10)} className="bt" type="submit">10</button>
-                
                     </div>
                 </div>
 
                 <div className="questao" id="questao05">
                     O quanto avalia o atendimento em modo geral?
-
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(5,1)} className="bt" type="submit">1</button>
                         <button id="bt1" onClick={() => avaliacao(5,2)} className="bt" type="submit">2</button>
@@ -127,9 +125,7 @@ const Formulario = () => {
                         <button id="bt3" onClick={() => avaliacao(5,8)} className="bt" type="submit">8</button>
                         <button id="bt3" onClick={() => avaliacao(5,9)} className="bt" type="submit">9</button>
                         <button id="bt3" onClick={() => avaliacao(5,10)} className="bt" type="submit">10</button>
-                
                     </div>
-
                 </div>
                 
                 <div className="botaofinalizar">

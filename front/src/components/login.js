@@ -1,31 +1,43 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import '../style.css'
-import axios from 'axios';
+import axios from 'axios'
+
+export const Autenticando = async (usuario, senha) => {
+    try {
+        await axios.get("/login", {
+            params: {
+                cpf: usuario,
+                senha: senha
+            }
+        });
+        return(true);
+    } 
+    catch {
+        alert("Usuário ou senha inválido!")
+        return(false)
+    }
+}
 
 const Login = () => {
 
-    const formRef = useRef(null)
     const [usuario, setUsuario]= useState("");
     const [senha, setSenha]= useState("");
-    const [mensagem, setMensagem] = useState("");
     const history = useHistory();
 
     async function login() {
-        try {
-            await axios.get("/login", {
-                params: {
-                    cpf: usuario,
-                    senha: senha
-                }
+        const autenticado = await Autenticando(usuario, senha)
+        if (autenticado === true) {
+            history.push({
+                pathname: '/relatorio',
+                state: {autenticado: autenticado}
             });
             history.push('/relatorio');
         } 
         catch {
             alert("Usuário ou senha inválidos!")
         }
-        
     }
 
     return (
@@ -36,9 +48,8 @@ const Login = () => {
             onChange={(u)=>setUsuario((u.target.value))}></input>
             <input className="mb-3 form-control" type="password" id="input-senha" placeholder="Senha" 
             onChange={(s)=>setSenha((s.target.value))}></input>
-            {mensagem}
-            <button onClick={login} className="botaoiniciar btn btn-success" type="button">Fazer login</button>    
-        </div>
+            <button onClick={login} className="botaoiniciar btn btn-success" type="button">Fazer login</button>
+        </div> 
     )
 }
 
