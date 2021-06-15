@@ -51,7 +51,7 @@ class RelatorioFinal extends Component {
                     <button type="button" className="btn btn-success">Fechar</button>
                 </div>
                 <script src="script.js"></script>
-    
+
             </div>
         )
     };
