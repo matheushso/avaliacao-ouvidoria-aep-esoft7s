@@ -31,31 +31,31 @@ const RelatorioFinal = () => {
                     <b>Setor de atendimento:</b>  
                 </div>
                 <div class="topico" id="t1">
-                    <b>Questão 01 - (O quanto avalia a rapidez do atendimento?)</b><br></br> 
+                    <b>Questão 01 AGILIDADE - (Qual o nível de agilidade do atendimento?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t2">
-                    <b>Questão 02 - (O quanto avalia a qualidade do atendimento?)</b><br></br> 
+                    <b>Questão 02 EFICIÊNCIA - (Como você avalia a eficiência do atendimento?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t3">
-                    <b>Questão 03 - (O quanto avalia a disposição do atendente?)</b><br></br> 
+                    <b>Questão 03 DISPONIBILIDADE - (O quão disponível estavam nossos canais de atendimento?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t4">
-                    <b>Questão 04 - (O quanto avalia a facilidade de contato?)</b><br></br>
+                    <b>Questão 04 ACESSIBILIDADE- (O quão acessível estão nossos canais de atendimento?)</b><br></br>
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
                 </div>
                 <div class="topico" id="t5">
-                    <b>Questão 05 - (O quanto avalia o atendimento em modo geral?)</b><br></br> 
+                    <b>Questão 05 QUALIDADE- (De modo geral como você avalia o atendimento?)</b><br></br> 
                     Menor nota:<br></br>
                     Maior nota:<br></br>
                     Média:
