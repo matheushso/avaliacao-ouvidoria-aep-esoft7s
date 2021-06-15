@@ -39,15 +39,13 @@ const Formulario = () => {
             <div id="info-ptc">
                 Protocolo: {protocolo}
             </div>
-            <div>
-                <h3 className="text-center">Protocolo: {protocolo}</h3>
-            </div>
+            
 
             <div className="formulario">
 
                 <div className="questao" id="questao01">
-                    O quanto avalia a rapidez do atendimento?
-
+            
+                    Qual o nível de agilidade do atendimento?
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(1,1)} className="bt" type="submit">1</button>
                         <button id="bt1" onClick={() => avaliacao(1,2)} className="bt" type="submit">2</button>
@@ -63,7 +61,7 @@ const Formulario = () => {
                 </div>
 
                 <div className="questao" id="questao02">
-                    O quanto avalia a qualidade do atendimento?
+                    Como você avalia a eficiência do atendimento?
 
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(2,1)} className="bt"  type="submit">1</button>
@@ -80,7 +78,7 @@ const Formulario = () => {
                 </div>
 
                 <div className="questao" id="questao03">
-                    O quanto avalia a disposição do atendente?
+                    O quão disponível estavam nossos canais de atendimento?
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(3,1)} className="bt" type="submit">1</button>
                         <button id="bt1" onClick={() => avaliacao(3,2)} className="bt" type="submit">2</button>
@@ -96,7 +94,7 @@ const Formulario = () => {
                 </div>
 
                 <div className="questao" id="questao04">
-                    O quanto avalia a facilidade de contato?
+                    O quão acessível estão nossos canais de atendimento?
 
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(4,1)} className="bt" type="submit">1</button>
@@ -113,7 +111,7 @@ const Formulario = () => {
                 </div>
 
                 <div className="questao" id="questao05">
-                    O quanto avalia o atendimento em modo geral?
+                    De modo geral como você avalia o atendimento?
                     <div className="bts">
                         <button id="bt1" onClick={() => avaliacao(5,1)} className="bt" type="submit">1</button>
                         <button id="bt1" onClick={() => avaliacao(5,2)} className="bt" type="submit">2</button>

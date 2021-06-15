@@ -196,6 +196,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 600px;
 
 }
 
@@ -310,6 +311,6 @@ h1{
 }
 
 #info-ptc{
-    margin-left: 175px;
+    margin-left: 100px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

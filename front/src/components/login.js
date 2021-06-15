@@ -18,7 +18,7 @@ export const Autenticando = async (usuario, senha) => {
         alert("Usuário ou senha inválido!")
         return(false)
     }
-}
+} 
 
 const Login = () => {
 
@@ -26,19 +26,22 @@ const Login = () => {
     const [senha, setSenha]= useState("");
     const history = useHistory();
 
-    async function login() {
+     async function login() {
+
         const autenticado = await Autenticando(usuario, senha)
-        if (autenticado === true) {
-            history.push({
-                pathname: '/relatorio',
-                state: {autenticado: autenticado}
-            });
-            history.push('/relatorio');
-        } 
+        try{
+            if (autenticado === true) {
+                history.push({
+                    pathname: '/relatorio',
+                    state: {autenticado: autenticado}
+                });
+                history.push('/relatorio');
+            }
+        }
         catch {
             alert("Usuário ou senha inválidos!")
         }
-    }
+    }  
 
     return (
         <div className="logo-pmm section">
@@ -53,4 +56,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Login; 
