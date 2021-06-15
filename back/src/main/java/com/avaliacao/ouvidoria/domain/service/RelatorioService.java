@@ -1,5 +1,7 @@
 package com.avaliacao.ouvidoria.domain.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,5 +19,13 @@ public class RelatorioService {
 	
 	public Relatorio salvar(Relatorio relatorio) {
 		return repository.save(relatorio);
+	}
+	
+	public List<Relatorio> gerarRelatorio() {
+		return repository.gerarRelatorio();
+	}
+	
+	public List<Relatorio> findAll() {
+		return repository.findAll();
 	}
 }

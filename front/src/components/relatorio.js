@@ -3,7 +3,6 @@ import Logo from '../img/Logo.png'
 import LogoRelatorio from '../img/icon.png'
 import '../style.css'
 import { Button } from 'reactstrap';
-import Login from './login';
 
 const Relatorio = () => {
 
