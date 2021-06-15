@@ -28,14 +28,15 @@ const Login = () => {
 
     async function login() {
         const autenticado = await Autenticando(usuario, senha)
-        if (autenticado === true) {
-            history.push({
-                pathname: '/relatorio',
-                state: {autenticado: autenticado}
-            });
-            history.push('/relatorio');
-        } 
-        catch {
+        try {
+            if (autenticado === true) {
+                history.push({
+                    pathname: '/relatorio',
+                    state: {autenticado: autenticado}
+                });
+                history.push('/relatorio');
+            }
+        } catch {
             alert("Usuário ou senha inválidos!")
         }
     }

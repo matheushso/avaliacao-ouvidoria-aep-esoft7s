@@ -2,6 +2,7 @@ import Logo from '../img/Logo.png'
 import '../style.css'
 import { Button } from 'reactstrap';
 import { useHistory } from 'react-router-dom'
+import axios from 'axios';
 
 const RelatorioGeral = () => {
 
@@ -12,6 +13,7 @@ const RelatorioGeral = () => {
     }
 
     function relatorioFinal() {
+        axios.post('/relatorio');
         history.push('/relatorioFinal');
     }
     

@@ -42,7 +42,7 @@ public class Relatorio {
 	
 	@NotBlank
 	@Column
-	private Integer mediaTotal;
+	private double mediaTotal;
 	
 	@NotBlank
 	@Column
