@@ -35,6 +35,10 @@ const Formulario = () => {
                 </div>
             </div>
 
+
+            <div id="info-ptc">
+                Protocolo: {protocolo}
+            </div>
             <div>
                 <h3 className="text-center">Protocolo: {protocolo}</h3>
             </div>

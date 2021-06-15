@@ -308,4 +308,8 @@ h1{
 .delete-button{
     border: 2px black solid;
 }
+
+#info-ptc{
+    margin-left: 175px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
