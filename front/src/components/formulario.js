@@ -35,7 +35,7 @@ const Formulario = () => {
                 </div>
             </div>
 
-            <div>
+            <div id="info-ptc">
                 Protocolo: {protocolo}
             </div>
 
