@@ -1,6 +1,5 @@
 import Logo from '../img/Logo.png'
 import '../style.css'
-import React, { useState } from 'react';
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Button } from 'reactstrap';
 import { useHistory } from 'react-router-dom'
