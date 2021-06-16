@@ -21,8 +21,8 @@ public class AdminController {
 	private AdminService service;
 	
 	@GetMapping
-	public ResponseEntity<?> getLogin(@RequestParam @Valid String cpf, @RequestParam String senha) {
-		Admin login = service.login(cpf, senha);
+	public ResponseEntity<?> getLogin(@RequestParam @Valid String usuario, @RequestParam String senha) {
+		Admin login = service.login(usuario, senha);
 		try {
 			if (login != null) {
 				return ResponseEntity.status(HttpStatus.OK).body("Logado com sucesso");

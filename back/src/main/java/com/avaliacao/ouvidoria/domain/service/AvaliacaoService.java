@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.avaliacao.ouvidoria.domain.model.Avaliacao;
 import com.avaliacao.ouvidoria.domain.repository.AvaliacaoRepository;
 
-
 @Service
 @Transactional
 public class AvaliacaoService {
@@ -17,7 +16,8 @@ public class AvaliacaoService {
 	private AvaliacaoRepository repository;
 	
 	public Avaliacao salvar(Avaliacao avaliacao) {
-		return repository.save(avaliacao);
+		repository.flush();
+		return repository.saveAndFlush(avaliacao);
 	}
 	
 	public Avaliacao buscarPergunta(String protocolo, int pergunta) {

@@ -20,5 +20,4 @@ public class QuestaoService {
 	public List<Questao> findAll() {
 		return repository.findAll();
 	}
-	
 }

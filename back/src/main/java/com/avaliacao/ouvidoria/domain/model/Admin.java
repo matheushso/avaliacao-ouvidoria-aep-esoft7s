@@ -27,14 +27,12 @@ public class Admin {
 	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	//TODO Alterar String de 'cpf' para 'usuario'
+
 	@NotBlank
 	@Column
-	private String cpf;
+	private String usuario;
 	
 	@NotBlank
 	@Column
 	private String senha;
-
 }

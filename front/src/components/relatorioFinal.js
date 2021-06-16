@@ -32,16 +32,17 @@ class RelatorioFinal extends Component {
                     <img id="logo-form" src={Logo} alt="ouvidoria156"></img>
                     
                     <div className="description-form" id="desc-relatorio">
-                        Relatorio Final <br></br>
+                        Relatorio Final <br/>
                     </div>
                 </div>
 
                 {listar.map(lista => (
                     <div className="formulario-final">
                         <div class="topico" id="t1">
-                            <b>Questão {lista.pergunta}</b><br></br> 
-                            Menor nota: {lista.menorResposta} <br></br>
-                            Maior nota: {lista.maiorResposta} <br></br>
+                            <b>Questão {lista.pergunta}: {lista.questao}</b><br/>
+                            Total de respostas: {lista.totalPerguntas} <br/>
+                            Menor nota: {lista.menorResposta} <br/>
+                            Maior nota: {lista.maiorResposta} <br/>
                             Média: {lista.mediaTotal}
                         </div>
                     </div>

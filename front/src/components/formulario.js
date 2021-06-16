@@ -36,8 +36,8 @@ const Formulario = () => {
             </div>
 
 
-            <div id="info-ptc">
-                Protocolo: {protocolo}
+            <div className="description-form">
+                <h3>Protocolo: {protocolo}</h3>
             </div>
             
 
