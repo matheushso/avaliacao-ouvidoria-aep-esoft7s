@@ -8,5 +8,5 @@ import com.avaliacao.ouvidoria.domain.model.Admin;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Long>{
 	
-	Admin findByCpfAndSenhaLike(String cpf, String senha);
+	Admin findByUsuarioAndSenhaLike(String usuario, String senha);
 }

@@ -8,7 +8,7 @@ export const Autenticando = async (usuario, senha) => {
     try {
         await axios.get("/login", {
             params: {
-                cpf: usuario,
+                usuario: usuario,
                 senha: senha
             }
         });

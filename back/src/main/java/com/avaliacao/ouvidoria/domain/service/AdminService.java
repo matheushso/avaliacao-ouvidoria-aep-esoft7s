@@ -15,7 +15,7 @@ public class AdminService {
 	@Autowired
 	private AdminRepository repository;
 	
-	public Admin login(String cpf, String senha) {
-		return repository.findByCpfAndSenhaLike(cpf, senha);
+	public Admin login(String usuario, String senha) {
+		return repository.findByUsuarioAndSenhaLike(usuario, senha);
 	}
 }

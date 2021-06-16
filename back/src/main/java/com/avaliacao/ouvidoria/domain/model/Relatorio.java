@@ -29,11 +29,11 @@ public class Relatorio {
 	
 	@NotBlank
 	@Column
-	private String idRelatorio;
+	private int pergunta;
 	
 	@NotBlank
 	@Column
-	private int pergunta;
+	private String questao;
 	
 	@NotBlank
 	@Column

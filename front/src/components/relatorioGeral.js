@@ -13,7 +13,7 @@ const RelatorioGeral = () => {
     }
 
     function relatorioFinal() {
-        axios.post('/relatorio');
+        axios.get('/relatorio');
         history.push('/relatorioFinal');
     }
     

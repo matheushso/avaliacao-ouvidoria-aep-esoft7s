@@ -18,11 +18,7 @@ public class RelatorioService {
 	private RelatorioRepository repository;
 	
 	public Relatorio salvar(Relatorio relatorio) {
-		return repository.save(relatorio);
-	}
-	
-	public List<Relatorio> gerarRelatorio() {
-		return repository.gerarRelatorio();
+		return repository.saveAndFlush(relatorio);
 	}
 	
 	public List<Relatorio> findAll() {
