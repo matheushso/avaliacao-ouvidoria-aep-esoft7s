@@ -20,6 +20,5 @@ public class QuestaoController {
 	@GetMapping
 	public List<Questao> getQuestao() {
 		return service.findAll();
-		
 	}
 }

@@ -35,5 +35,4 @@ public class Questao {
 	@NotBlank
 	@Column
 	private String questao;
-	
 }
