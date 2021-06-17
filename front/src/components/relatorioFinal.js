@@ -1,13 +1,7 @@
 import { Component } from 'react'
 import Logo from '../img/Logo.png'
 import '../style.css'
-import axios from 'axios';
-
-/* function Relatorio() {
-    const history = useHistory();
-
-    history.push("/relatorio");
-} */
+import axios from 'axios'
 
 class RelatorioFinal extends Component {
 

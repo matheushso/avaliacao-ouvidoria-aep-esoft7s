@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import '../style.css'
 import axios from 'axios'
+import { Button } from 'reactstrap'
 
 export const Autenticando = async (usuario, senha) => {
     try {
@@ -18,7 +19,7 @@ export const Autenticando = async (usuario, senha) => {
         alert("Usuário ou senha inválido!")
         return(false)
     }
-} 
+}
 
 const Login = () => {
 
@@ -41,7 +42,11 @@ const Login = () => {
         catch {
             alert("Usuário ou senha inválidos!")
         }
-    }  
+    }
+
+    function sair() {
+        history.push('/');
+    }
 
     return (
         <div className="logo-pmm section">
@@ -51,7 +56,10 @@ const Login = () => {
             onChange={(u)=>setUsuario((u.target.value))}></input>
             <input className="mb-3 form-control" type="password" id="input-senha" placeholder="Senha" 
             onChange={(s)=>setSenha((s.target.value))}></input>
-            <button onClick={login} className="botaoiniciar btn btn-success" type="button">Fazer login</button>
+            <div className="botao-gerar">
+                <Button color="danger" onClick={sair}>Voltar</Button>{' '}
+                <button onClick={login} className="btn btn-success" type="button">Fazer login</button>
+            </div>
         </div> 
     )
 }
