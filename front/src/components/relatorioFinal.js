@@ -2,6 +2,7 @@ import { Component } from 'react'
 import Logo from '../img/Logo.png'
 import '../style.css'
 import axios from 'axios'
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
 class RelatorioFinal extends Component {
 
@@ -14,14 +15,13 @@ class RelatorioFinal extends Component {
       
         this.setState({ listar: response.data });
     }
-      
+
     render() {
 
         const { listar } = this.state
 
         return (
             <div className="section-form-relatorioFinal">
-    
                 <div className="head">
                     <img id="logo-form" src={Logo} alt="ouvidoria156"></img>
                     
@@ -29,15 +29,17 @@ class RelatorioFinal extends Component {
                         Relatorio Final <br/>
                     </div>
                 </div>
-
                 {listar.map(lista => (
                     <div className="formulario-final">
                         <div class="topico" id="t1">
-                            <b>Questão {lista.pergunta}: {lista.questao}</b><br/>
-                            Total de respostas: {lista.totalPerguntas} <br/>
-                            Menor nota: {lista.menorResposta} <br/>
-                            Maior nota: {lista.maiorResposta} <br/>
-                            Média: {lista.mediaTotal}
+                            <b>Questão {lista.pergunta}: {lista.questao}</b>
+                            Total de respostas: {lista.totalPerguntas} <br/> <br/>
+                            Menor nota: <br/>
+                            <ProgressBar id="progressBar" variant="info" now={lista.menorResposta * 10} label={`${lista.menorResposta}`} />
+                            Maior nota: <br/>
+                            <ProgressBar id="progressBar" variant="info" now={lista.maiorResposta * 10} label={`${lista.maiorResposta}`}/>
+                            Média:
+                            <ProgressBar id="progressBar" variant="info" now={lista.mediaTotal * 10} label={`${lista.mediaTotal}`} />
                         </div>
                     </div>
                 ))}
@@ -50,6 +52,8 @@ class RelatorioFinal extends Component {
             </div>
         )
     };
+
+    
 }
 
 export default RelatorioFinal;

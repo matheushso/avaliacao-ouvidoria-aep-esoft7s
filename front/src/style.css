@@ -313,4 +313,10 @@ h1{
 #info-ptc{
     margin-left: 100px;
 }
+
+#progressBar{
+    font-size: 17px;
+    height: 20px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
