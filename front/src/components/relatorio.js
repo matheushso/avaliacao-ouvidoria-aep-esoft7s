@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom'
 import Logo from '../img/Logo.png'
 import LogoRelatorio from '../img/icon.png'
 import '../style.css'
-import { Button } from 'reactstrap';
+import { Button } from 'reactstrap'
 
 const Relatorio = () => {
 
@@ -19,8 +19,9 @@ const Relatorio = () => {
     function sair() {
         if (window.confirm("Realmente deseja sair?")) {
             history.push('/login');
-          }
-    } 
+        }
+    }
+
     return (
         <div className="section">
             <div className="logo">
